@@ -117,8 +117,6 @@
 
 import React from 'react';
 import './DropdownMenu.css'; // Make sure you have the appropriate CSS file for styling
-
-// Import your icons
 import ViewIcon from '../assets/view.svg';
 import DownloadIcon from '../assets/download.svg';
 import RenameIcon from '../assets/rename.svg';

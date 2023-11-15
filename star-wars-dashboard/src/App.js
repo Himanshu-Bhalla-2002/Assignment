@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Welcome from './components/Welcome';
 import MovieCard from './components/MovieCard';
-
+import Modal from './components/Modal';
 // Import other component views you will create for each route
 import Films from './views/Films';
 import People from './views/People';
@@ -16,7 +16,12 @@ import Vehicles from './views/Vehicles';
 import './App.css';
 import MovieList from './components/MovieList';
 import DropdownMenu from './components/DropdownMenu';
-
+const content = [
+  { label: 'Title', value: 'Star Wars' },
+  { label: 'Opening Crawl', value: 'Lorem ipsum dolor sit amet consectetur. Sit.' },
+  { label: 'Genre', value: 'Super Hero' },
+  // ... other items
+];
 function App() {
   return (
     <Router>
@@ -29,6 +34,13 @@ function App() {
             <Route path="/test" element={<MovieCard imgSrc="https://picsum.photos/seed/picsum/200/300" title="abc" />} />
             <Route path="/test1" element={<MovieList name={"abc"}  birthdate={"1234"}  species={"1234"}/>} />
             <Route path="/test2" element={<DropdownMenu/>} />
+            <Route path="/test3" element={
+          <Modal
+            title="Your Dynamic Title"
+            imageSrc="https://picsum.photos/seed/picsum/200/300"
+            content={content}
+          />} />
+
 
             <Route path="/films" element={<Films />} />
             <Route path="/people" element={<People />} />

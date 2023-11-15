@@ -41,7 +41,6 @@ const People = () => {
     {view === 'list' ? (
       <div className="movie-list-container">
         {people.map((person, index) => (
-          // console.log(person.name);
           <MovieList 
             name={person.name} 
             birthdate={person.birthYear} 

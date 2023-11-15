@@ -1,8 +1,7 @@
 .movie-card {
-  width: 350px; /* Adjust width as needed */
+  width: 300px; /* Adjust width as needed */
   height: 300px;
   border-radius: 8px;
-  overflow: hidden;
   background-color: #FFF;
   margin: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
