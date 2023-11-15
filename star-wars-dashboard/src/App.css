@@ -10,3 +10,12 @@
   flex-grow: 1;
   background-color: #03123B;
 }
+
+a {
+  color: inherit; 
+  text-decoration: none;
+}
+
+.active {
+  color: #ffd700; 
+}
