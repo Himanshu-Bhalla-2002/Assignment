@@ -7,7 +7,7 @@ import ListViewIcon from '../assets/ListViewIcon.svg';
 
 const People = () => {
   const [people, setPeople] = useState([]);
-  const [view, setView] = useState('grid');
+  const [view, setView] = useState('list');
   const [loading, setLoading] = useState(true); 
   useEffect(() => {
     fetch('https://swapi.dev/api/people')

@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
-import './FilmList.css';
+import './StarshipsList.css';
 import DropdownMenu from '../components/DropdownMenu';
 import Modal from '../components/Modal'; 
 import threeDotsIcon from '../assets/three-dots.svg';
 
-const FilmList = ({ title,releaseDate,posterImage}) => {
+const VehiclesList = ({  
+    name,
+    model,
+    crew,
+    manufacturer,
+    posterImage}) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -22,20 +27,21 @@ const FilmList = ({ title,releaseDate,posterImage}) => {
   return (
     <div className="movie-list-item">
       <div className="movie-list-details">
-        <div className="movie-list-name">{title}</div>
-        <div className="movie-list-birthdate"></div>
-        <div className="movie-list-species">{releaseDate}</div>
+        <div className="movie-list-name">{name}</div>
+        <div className="movie-list-birthdate">{model}</div>
+        <div className="movie-list-species">{crew}</div>
       </div>
       <div className="movie-list-menu" onClick={toggleDropdown}>
         <img src={threeDotsIcon} alt="More options" />
       </div>
       {isDropdownOpen && <DropdownMenu show={isDropdownOpen} onOpenModal={openModal} />}
       {isModalOpen && <Modal 
-        title={title} 
+        title={name} 
         imageSrc={posterImage} 
         content={[
-          { label: 'releaseDate', value: releaseDate },
-          
+        { label: 'Model', value: model },
+        { label: 'Crew', value: crew },
+        { label: 'Manufacturer', value: manufacturer },
         ]}
         onClose={closeModal}
       />}
@@ -43,4 +49,4 @@ const FilmList = ({ title,releaseDate,posterImage}) => {
   );
 };
 
-export default FilmList;
+export default VehiclesList;
