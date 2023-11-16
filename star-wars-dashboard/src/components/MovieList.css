@@ -6,7 +6,7 @@
   border-bottom: 1px solid #ccc;
   background-color: #2B2D42;
   color: #FFF;
-  min-height: 60px; /* Adjust the min-height to fit the content */
+  min-height: 60px; 
   width: 1000px;
 }
 
@@ -15,7 +15,7 @@
   align-items: center;
   flex-grow: 1;
   justify-content: space-between;
-  min-height: 60px; /* Match the height of the parent */
+  min-height: 60px; 
 }
 
 .movie-list-name,
@@ -25,8 +25,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 33%; /* Assign a fixed width */
-  min-height: 60px; /* Ensure each item has the same height */
+  width: 33%; 
+  min-height: 60px;
 }
 
 .movie-list-menu {

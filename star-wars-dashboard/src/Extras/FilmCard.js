@@ -34,7 +34,7 @@ export const FilmCard = ({  title,releaseDate,posterImage}) => {
       title={title} 
       imageSrc={posterImage} 
       content={[
-        { label: 'releaseDate', value: releaseDate },
+        { label: 'Release Date', value: releaseDate },
         
       ]}
         onClose={closeModal}
