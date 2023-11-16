@@ -1,6 +1,6 @@
 import React from 'react';
 import './Welcome.css';
-import backgroundImage from '../assets/background.jpg'; // Make sure this path is correct
+import backgroundImage from '../assets/background.jpg'; 
 
 function Welcome() {
   return (

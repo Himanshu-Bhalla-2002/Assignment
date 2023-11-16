@@ -1,12 +1,12 @@
 .navbar {
   width: 100%;
-  background: #03123B; /* Adjust the color as needed */
-  padding: 10px 20px; /* Adjust padding as needed */
+  background: #03123B; 
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .navbar svg {
-  height: 50px; /* Adjust based on your SVG */
+  height: 50px; 
 }

@@ -1,5 +1,5 @@
 .movie-card {
-  width: 300px; /* Adjust width as needed */
+  width: 300px; 
   height: 300px;
   border-radius: 8px;
   background-color: #FFF;
@@ -10,7 +10,7 @@
 }
 
 .movie-image {
-  height: 260px; /* Adjust height as needed */
+  height: 260px; 
   background-size: cover;
   background-position: center;
 }
@@ -18,8 +18,8 @@
 
 
 .movie-menu-icon {
-  width: 24px; /* Adjust size as needed */
-  height: 24px; /* Adjust size as needed */
+  width: 24px;
+  height: 24px; 
 }
 
 
@@ -27,15 +27,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 10px 10px 0; /* Add padding on the top, right, and left, but not the bottom */
-  background-color: #343a40; /* Match this color to your design */
+  padding: 10px 10px 10px 0; 
+  background-color: #343a40; 
   color: #FFF;
 }
 
 .movie-title {
   flex-grow: 1;
-  margin: 0; /* Ensure there is no margin causing extra space */
-  padding: 0 10px; /* Add padding on the left and right if needed */
+  margin: 0; 
+  padding: 0 10px; 
 }
 
 

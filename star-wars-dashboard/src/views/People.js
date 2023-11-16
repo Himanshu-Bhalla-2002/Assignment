@@ -53,8 +53,9 @@ const People = () => {
         {people.map((person, index) => (
           <MovieCard 
             key={index} 
-            imgSrc={`https://picsum.photos/seed/${person.name}/200/300`} 
+            imgSrc={`https://picsum.photos/seed/${Math.random()}/200/300`} 
             title={person.name} 
+            person={person}
           />
         ))}
       </div>

@@ -3,9 +3,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 16px;
-    border-bottom: 1px solid #ccc; /* Add a bottom border for each item */
-    background-color: #2B2D42; /* Dark background color, adjust to your design */
-    color: #FFF; /* Text color */
+    border-bottom: 1px solid #ccc; 
+    background-color: #2B2D42; 
+    color: #FFF; 
     height:40px;
     width:1000px;
   }
@@ -19,13 +19,13 @@
   .movie-list-name,
   .movie-list-birthdate,
   .movie-list-species {
-    margin-right: 16px; /* Add spacing between details */
+    margin-right: 16px; 
   }
   
   .movie-list-menu {
-    width: 24px; /* Size of the menu icon */
-    height: 24px; /* Size of the menu icon */
+    width: 24px; 
+    height: 24px; 
     cursor: pointer;
-    /* Additional styles if needed */
+    
   }
   

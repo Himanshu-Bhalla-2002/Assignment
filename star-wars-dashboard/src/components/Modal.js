@@ -1,13 +1,13 @@
 import React from 'react';
-import './Modal.css'; // This will be your CSS file for styling the modal
+import './Modal.css';
 
-const Modal = ({ title, imageSrc, content }) => {
+const Modal = ({ title, imageSrc, content, onClose }) => {
   return (
-    <div className="modal-overlay">
-      <div className="modal-container">
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-container" onClick={e => e.stopPropagation()}>
         <div className="modal-header">
           <h2>{title}</h2>
-          <button className="close-button">✕</button>
+          <button className="close-button" onClick={onClose}>✕</button>
         </div>
         <div className="modal-image">
           <img src={imageSrc} alt="Modal Visual" />
@@ -18,7 +18,7 @@ const Modal = ({ title, imageSrc, content }) => {
             <p>{item.value}</p>
           </div>
         ))}
-        <button className="modal-close">Close</button>
+        <button className="modal-close" onClick={onClose}>Close</button>
       </div>
     </div>
   );

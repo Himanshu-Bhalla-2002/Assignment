@@ -1,34 +1,23 @@
-// import React from 'react';
-// import './MovieList.css'; // Make sure to create and import MovieList.css
-// import threeDotsIcon from '../assets/three-dots.svg'; // Import the three-dots icon
-
-// const MovieList = ({ name, birthdate, species }) => {
-//   return (
-//     <div className="movie-list-item">
-//       <div className="movie-list-details">
-//         <div className="movie-list-name">{name}</div>
-//         <div className="movie-list-birthdate">{birthdate}</div>
-//         <div className="movie-list-species">{species}</div>
-//       </div>
-//       <img src={threeDotsIcon} alt="More options" className="movie-list-menu" />
-//     </div>
-//   );
-// };
-
-// export default MovieList;
-
-
 import React, { useState } from 'react';
 import './MovieList.css';
-import DropdownMenu from './DropdownMenu'; // Import the DropdownMenu component
-import threeDotsIcon from '../assets/three-dots.svg'; // Import the three-dots icon
+import DropdownMenu from './DropdownMenu';
+import Modal from './Modal'; 
+import threeDotsIcon from '../assets/three-dots.svg';
 
-const MovieList = ({ name, birthdate, species }) => {
-  // State to manage the visibility of the dropdown menu
+const MovieList = ({ name, birthdate, species, imageSrc }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Function to toggle the dropdown menu
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+    setIsDropdownOpen(false);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <div className="movie-list-item">
@@ -40,7 +29,16 @@ const MovieList = ({ name, birthdate, species }) => {
       <div className="movie-list-menu" onClick={toggleDropdown}>
         <img src={threeDotsIcon} alt="More options" />
       </div>
-      {isDropdownOpen && <DropdownMenu />}
+      {isDropdownOpen && <DropdownMenu show={isDropdownOpen} onOpenModal={openModal} />}
+      {isModalOpen && <Modal 
+        title={name} 
+        imageSrc={imageSrc} 
+        content={[
+          { label: 'Birthdate', value: birthdate },
+          { label: 'Species', value: species },
+        ]}
+        onClose={closeModal}
+      />}
     </div>
   );
 };

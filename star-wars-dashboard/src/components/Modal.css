@@ -1,83 +1,79 @@
-
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 30%; /* Modal width as 30% of viewport */
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Dimmed background */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .modal-container {
-    background-color: #2a2d34; /* Dark blue color */
-    width: 100%; /* Take full width of the overlay */
-    height: auto;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: auto;
-    border-radius: 5px; /* Optional border-radius */
-    color: white;
-  }
-  
-  .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .close-button {
-    background-color: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 1.5em;
-  }
-  
-  .modal-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
-  
-  .modal-item h3 {
-    margin-bottom: 5px;
-  }
-  
-  .modal-item p {
-    background-color: #ffffff;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px; /* Space between items */
-  }
-  
-  .modal-close {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background-color: #e91e63; /* Pink color for the button */
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-  }
-  
-  .modal-image {
-    width: 100%; /* Full width of the modal */
-    overflow: hidden; /* Hide overflow */
-    border-radius: 8px; /* Rounds the corners of the image container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow around the image */
-    /* Set a fixed height or max-height here if you want to constrain the height */
-    max-height: 354px; /* for example, adjust as needed */
-  }
-  
-  .modal-image img {
-    width: 100%; /* Width is 100% of the container */
-    height: auto; /* Height is automatic to maintain aspect ratio */
-    object-fit: cover; /* This will cover the area of the container without stretching the image */
-    border-radius: 8px; /* Match border-radius of the image container */
-  }
-  
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container {
+  background-color: #2a2d34; 
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  border-radius: 5px;
+  color: white;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.modal-image {
+  height: px;
+  width: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 354px;
+}
+
+.modal-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.modal-item h3 {
+  margin-bottom: 5px;
+  color: #ccc; /* Lighter text color for headings */
+}
+
+.modal-item p {
+  background-color: #ffffff;
+  color: #000; /* Dark text color for content */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden; /* Ensures content does not overflow its container */
+  text-overflow: ellipsis; /* Adds an ellipsis if the text is too long */
+  white-space: nowrap; /* Keeps the text on a single line */
+}
+
+.modal-close {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #e91e63;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
