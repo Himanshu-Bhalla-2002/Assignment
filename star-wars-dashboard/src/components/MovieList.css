@@ -1,31 +1,40 @@
 .movie-list-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px;
-    border-bottom: 1px solid #ccc; 
-    background-color: #2B2D42; 
-    color: #FFF; 
-    height:40px;
-    width:1000px;
-  }
-  
-  .movie-list-details {
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-between;
-  }
-  
-  .movie-list-name,
-  .movie-list-birthdate,
-  .movie-list-species {
-    margin-right: 16px; 
-  }
-  
-  .movie-list-menu {
-    width: 24px; 
-    height: 24px; 
-    cursor: pointer;
-    
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid #ccc;
+  background-color: #2B2D42;
+  color: #FFF;
+  min-height: 60px; /* Adjust the min-height to fit the content */
+  width: 1000px;
+}
+
+.movie-list-details {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+  min-height: 60px; /* Match the height of the parent */
+}
+
+.movie-list-name,
+.movie-list-birthdate,
+.movie-list-species {
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 33%; /* Assign a fixed width */
+  min-height: 60px; /* Ensure each item has the same height */
+}
+
+.movie-list-menu {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

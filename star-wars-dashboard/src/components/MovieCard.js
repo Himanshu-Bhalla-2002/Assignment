@@ -31,8 +31,8 @@ export const MovieCard = ({ imgSrc, title, person }) => {
       
       {isDropdownOpen && <DropdownMenu show={isDropdownOpen} onOpenModal={openModal} />}
       {isModalOpen && <Modal title={title} imageSrc={imgSrc} content={[
-          { label: 'Name', value: person.name },
-          { label: 'Birth Year', value: person.birthYear },
+          { label: 'BirthDate', value: person.birthYear },
+          { label: 'Species', value: person.species },
         ]}
         onClose={closeModal}
       />}

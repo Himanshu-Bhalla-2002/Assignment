@@ -1,39 +1,33 @@
-.people-grid {
+.films-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; 
     gap: 16px; 
     padding: 16px;
-  }
-  
-  .people-container {
+}
+
+.films-container {
     max-width: 1200px; 
     margin: auto; 
-  }
-  .header h1 {
+}
+
+.header h1 {
     color: white;
 }
 
-   .header {
+.header {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
     height: 100px;
     width: 1000px;
-  }
-  
-  .header-icons svg {
+}
+
+.header-icons svg {
     cursor: pointer;
     margin-left: 10px; 
-  }
-  
-  .header-icons .active {
+}
+
+.header-icons .active {
     fill: blue;
-  }
-  .loading {
-    color: white;
-    text-align: center;
-    margin-top: 50px;
-    /* Add any other styles you want here */
-  }
-  
+}
